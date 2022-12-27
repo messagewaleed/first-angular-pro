@@ -1,0 +1,20 @@
+.profileCard{
+padding: 15px;
+border: 2px solid blue;
+max-width: fit-content;
+}
+.profileName{
+    color: blue;
+}
+.profileDesignation{
+    font-style: italic;
+}
+
+.profileSkills{
+font-size: 20px;
+}
+
+.profileContact{
+    border-left: 1px solid blue;
+    padding-left: 5px;
+}
