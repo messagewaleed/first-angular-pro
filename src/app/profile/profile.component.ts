@@ -12,6 +12,9 @@ export class ProfileComponent {
   // @Input('name') name !: string;
   // @Input('designation') designation !: string;
 
+
+  @Input("defaultValue") defaultValue : string = "Default Preference";
+
   flag : boolean = false;
 
   @Input('profile') profile !: Profile

@@ -7,8 +7,8 @@
 <h3 class="profileDesignation">{{profile.designation}}</h3>
 <h3 class="profileSkills">{{profile.skills}}</h3>
 
-<button *ngIf="!flag" (click)="toggleContactDetails()">Collapse</button>
-<button *ngIf="flag" (click)="toggleContactDetails()">Expand</button>
+<button class="btn btn-primary" *ngIf="!flag" (click)="toggleContactDetails()">Collapse</button>
+<button class="btn btn-primary" *ngIf="flag" (click)="toggleContactDetails()">Expand</button>
 <div *ngIf="!flag">
 <h3 class="profileLocation">{{profile.location}}</h3>
     <div *ngIf="profile.contact.length" class="profileContact">
@@ -18,7 +18,12 @@
         </p>
     </div>
 </div>
+<input type="text" [(ngModel)]="defaultValue">
+<br>
+{{defaultValue}}
 </div>
+
+
 
 
 <!-- *ngFor="let item of property" -->

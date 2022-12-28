@@ -7,3 +7,13 @@
 <!-- <profile name="NAME FROM HTML" designation="Tester"></profile> -->
 
 <profile [profile]="profile"></profile>
+
+
+<!-- Steps to follow/understand the flow for understanding passing members as parameters: */
+
+/* 1. Create the Profile DTO : a .ts file
+2. Create an @Input('profile') profile !: Profile in the profile component
+3. Remove the earlier profile initialization code in the profile component
+4. Instantiate the Profile object in AppComponent ts
+5. Pass that instance to the child component selector in app root html:
+            <profile [profile]='profile'></profile>  -->
