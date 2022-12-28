@@ -6,10 +6,20 @@
 <h2 class="profileName">{{profile.name}}</h2>
 <h3 class="profileDesignation">{{profile.designation}}</h3>
 <h3 class="profileSkills">{{profile.skills}}</h3>
+
+<button *ngIf="!flag" (click)="toggleContactDetails()">Collapse</button>
+<button *ngIf="flag" (click)="toggleContactDetails()">Expand</button>
+<div *ngIf="!flag">
 <h3 class="profileLocation">{{profile.location}}</h3>
-    <div class="profileContact">
-    <p>Contact details :</p>
-    <p>{{profile.contact[0]}}</p>
-    <p>{{profile.contact[1]}}</p>
+    <div *ngIf="profile.contact.length" class="profileContact">
+        <p>Contact details :</p>
+        <p *ngFor="let item of profile.contact">
+         {{item}}
+        </p>
     </div>
 </div>
+</div>
+
+
+<!-- *ngFor="let item of property" -->
+<!-- *ngIf="property" -->

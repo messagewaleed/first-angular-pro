@@ -8,4 +8,6 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title : string = "Dynamic E-Store";
   currentDate : string = new Date().toLocaleTimeString();
+
+  
 }
