@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Profile } from '../profile';
 
 @Component({
   selector: 'profile',
@@ -7,24 +8,34 @@ import { Component } from '@angular/core';
 })
 export class ProfileComponent {
 
+
+  // @Input('name') name !: string;
+  // @Input('designation') designation !: string;
+
   flag : boolean = false;
 
+  @Input('profile') profile !: Profile
 
-  profile: any;
+
+  // profile : any;
 
   constructor(){
-    this.profile = {
-      name : 'Haneen',
-      designation : 'Software Engineer',
-      skills : "HTML, CSS, Bootstrap, JavaScript",
-      location : "Kuwait",
-      contact : [
-        '9999-989-632',
-        '8888-700-989',
-        'haneen@kfh.com.kw',
-        'haneen@gmail.com'
-      ]
-    };
+    
+  }
+
+  ngOnInit(){ //Lifecyle hook
+    // this.profile = {
+    //   name : this.name,
+    //   designation : this.designation,
+    //   skills : "HTML, CSS, Bootstrap, JavaScript",
+    //   location : "Kuwait",
+    //   contact : [
+    //     '9999-989-632',
+    //     '8888-700-989',
+    //     'haneen@kfh.com.kw',
+    //     'haneen@gmail.com'
+    //   ]
+    // };
   }
 
   // handleButtonClick(){
