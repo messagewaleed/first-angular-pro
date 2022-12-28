@@ -1,5 +1,7 @@
+import { ThisReceiver } from '@angular/compiler';
 import { Component } from '@angular/core';
 import { Profile } from './profile';
+import { TestService } from './test.service';
 
 @Component({ //A decorator that tells Angular this is a component
   selector: 'root', //The selector for this component
@@ -12,7 +14,7 @@ export class AppComponent {
 
   profile !: Profile;
 
-  constructor(){
+  constructor(private service : TestService){
     this.profile = new Profile();
     this.profile.name = "Omar";
     this.profile.designation = "UI Developer";
@@ -22,6 +24,10 @@ export class AppComponent {
       '236-999-999',
       'omar@gmail.com'
     ];
+  }
+
+  getMessage(){
+    this.service.displayMessageOnConsole("Coming In from AppComponent");
   }
 
   

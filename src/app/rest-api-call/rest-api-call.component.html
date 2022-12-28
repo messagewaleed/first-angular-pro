@@ -1,0 +1,10 @@
+<div>
+    <input type="text" placeholder="Name to Search" [(ngModel)]="userName">
+    <input (click)="searchForUserOnGithub()" type="submit" value="Search on Github">
+</div>
+<div *ngIf="responseData">
+    <img src={{responseData.avatar_url}}/>
+    <p>Name : {{responseData.name}}</p>
+    <p>Public Repos : {{responseData.public_repos}}</p>
+    <p>User URL : {{responseData.url}}</p>
+</div>
