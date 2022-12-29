@@ -12,7 +12,8 @@ export class RestApiCallComponent {
 
   userName !: string;
 
-  urlToHit : string = "https://api.github.com/users/";
+   urlToHit : string = "https://api.github.com/users/";
+  // urlToHit : string = "http://localhost:8080/books";
 
   constructor(private httpClient : HttpClient){
 
