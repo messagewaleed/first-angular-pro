@@ -7,6 +7,9 @@ import { NgModel } from '@angular/forms';
   styleUrls: ['./form.component.css']
 })
 export class FormComponent {
+
+  num : number = 3;
+
   log(templateVar : NgModel){
     console.log(templateVar.errors);
     

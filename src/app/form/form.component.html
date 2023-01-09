@@ -2,7 +2,7 @@
     Coming from the Form Component
 </h2>
 <hr>
-<form>
+<form #myForm="ngForm">
   <div class="form-group">
 <input 
 class="form-control" 
@@ -22,4 +22,14 @@ pattern="[a-z]{4,8}"
      <div *ngIf="userName.errors?.['minlength']">Please enter atleast 4 characters</div> 
     <div *ngIf="userName.errors?.['pattern']">Please enter a valid username</div>
   </div> 
+  <button class="btn btn-primary" [disabled]="!myForm.form.valid">LOGIN</button>
+
 </form>
+<input type="text" [(ngModel)]="num">
+<div [ngSwitch]="num">
+    <div *ngSwitchCase="1">One</div>
+    <div *ngSwitchCase="2">Two</div>
+    <div *ngSwitchCase="3">Three</div>
+    <div *ngSwitchCase="4">Four</div>
+    <div *ngSwitchDefault>No Match Found...</div>
+</div>
