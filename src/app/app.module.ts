@@ -8,13 +8,15 @@ import { ProfileComponent } from './profile/profile.component';
 import { TestService } from './test.service';
 import { RestApiCallComponent } from './rest-api-call/rest-api-call.component';
 import {HttpClientModule} from '@angular/common/http';
+import { FormComponent } from './form/form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     OtherComponent,
     ProfileComponent,
-    RestApiCallComponent
+    RestApiCallComponent,
+    FormComponent
   ],
   imports: [
     BrowserModule,

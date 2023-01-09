@@ -1,0 +1,25 @@
+<h2>
+    Coming from the Form Component
+</h2>
+<hr>
+<form>
+  <div class="form-group">
+<input 
+class="form-control" 
+type="text" 
+name="userName" 
+id="userName"
+ngModel
+#userName="ngModel"
+(change)="log(userName)"
+required
+minLength="4"
+pattern="[a-z]{4,8}"
+>
+  </div> 
+  <div class="alert alert-danger" *ngIf="userName.touched && !userName.valid">
+    <div *ngIf="userName.errors?.['required']">Please enter your userName</div>
+     <div *ngIf="userName.errors?.['minlength']">Please enter atleast 4 characters</div> 
+    <div *ngIf="userName.errors?.['pattern']">Please enter a valid username</div>
+  </div> 
+</form>
