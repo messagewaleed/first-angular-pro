@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Profile } from '../profile';
+import { TruncatePipe } from '../truncate.pipe';
 
 @Component({
   selector: 'profile',
@@ -22,25 +23,21 @@ export class ProfileComponent {
   @Input('profile') profile !: Profile
 
 
-  // profile : any;
+  //  profile !: any;
 
-  constructor(){
+  constructor(private truncatePipe : TruncatePipe){
     
   }
 
   ngOnInit(){ //Lifecyle hook
-    // this.profile = {
-    //   name : this.name,
-    //   designation : this.designation,
-    //   skills : "HTML, CSS, Bootstrap, JavaScript",
-    //   location : "Kuwait",
-    //   contact : [
-    //     '9999-989-632',
-    //     '8888-700-989',
-    //     'haneen@kfh.com.kw',
-    //     'haneen@gmail.com'
-    //   ]
-    // };
+    this.profile = {
+      name : this.profile.name,
+      designation : this.profile.designation,
+      // skills : this.profile.skills,
+      skills: this.truncatePipe.transform(this.profile.skills, 5, "###"),
+      location : this.profile.location,
+      contact : this.profile.contact
+    };
   }
 
   // handleButtonClick(){

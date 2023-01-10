@@ -5,7 +5,7 @@
 <div class="profileCard">
 <h2 class="profileName" appHighlighter="yellow">{{profile.name}}</h2>
 <h3 class="profileDesignation">{{profile.designation}}</h3>
-<h3 class="profileSkills" appHighlighter="green">{{profile.skills | truncate : 4 : ' ... read more'}}</h3>
+<h3 class="profileSkills" appHighlighter="green">{{profile.skills}}</h3>
 
 <button class="btn btn-primary" *ngIf="!flag" (click)="toggleContactDetails()">Collapse</button>
 <button class="btn btn-primary" *ngIf="flag" (click)="toggleContactDetails()">Expand</button>

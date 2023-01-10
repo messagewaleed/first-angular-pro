@@ -28,7 +28,8 @@ import { TruncatePipe } from './truncate.pipe';
     HttpClientModule
   ],
   providers: [
-    TestService
+    TestService,
+    TruncatePipe
   ],
   bootstrap: [
     AppComponent
