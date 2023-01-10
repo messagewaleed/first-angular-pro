@@ -10,6 +10,7 @@ import { RestApiCallComponent } from './rest-api-call/rest-api-call.component';
 import {HttpClientModule} from '@angular/common/http';
 import { FormComponent } from './form/form.component';
 import { HighlighterDirective } from './highlighter.directive';
+import { TruncatePipe } from './truncate.pipe';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { HighlighterDirective } from './highlighter.directive';
     ProfileComponent,
     RestApiCallComponent,
     FormComponent,
-    HighlighterDirective
+    HighlighterDirective,
+    TruncatePipe
   ],
   imports: [
     BrowserModule,

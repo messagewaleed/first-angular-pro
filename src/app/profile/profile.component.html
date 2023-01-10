@@ -5,7 +5,7 @@
 <div class="profileCard">
 <h2 class="profileName" appHighlighter="yellow">{{profile.name}}</h2>
 <h3 class="profileDesignation">{{profile.designation}}</h3>
-<h3 class="profileSkills" appHighlighter="green">{{profile.skills}}</h3>
+<h3 class="profileSkills" appHighlighter="green">{{profile.skills | truncate : 4 : ' ... read more'}}</h3>
 
 <button class="btn btn-primary" *ngIf="!flag" (click)="toggleContactDetails()">Collapse</button>
 <button class="btn btn-primary" *ngIf="flag" (click)="toggleContactDetails()">Expand</button>
@@ -22,9 +22,32 @@
 <br>
 {{defaultValue}} -->
 </div>
+<div>
+    <p>
+        Date of Joining is : {{doj | date: 'fullDate' | lowercase}}
+    </p>
+</div>
+
+<!-- {{func() | uppercase}} -->
 
 
 
 
 <!-- *ngFor="let item of property" -->
 <!-- *ngIf="property" -->
+
+<!-- 
+UpperCase
+LowerCase
+DatePipe
+CurrencyPipe
+DecimalPipe -->
+
+<!-- || |
+&& &
+
+if(condition1 || condition2){
+
+} -->
+
+<!-- {{}} -->

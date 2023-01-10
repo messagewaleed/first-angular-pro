@@ -9,6 +9,8 @@ import { Profile } from '../profile';
 export class ProfileComponent {
 
 
+  doj = new Date(2021, 9, 12);
+
   // @Input('name') name !: string;
   // @Input('designation') designation !: string;
 
