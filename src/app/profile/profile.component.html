@@ -3,9 +3,9 @@
 </h3>
 <hr>
 <div class="profileCard">
-<h2 class="profileName">{{profile.name}}</h2>
+<h2 class="profileName" appHighlighter="yellow">{{profile.name}}</h2>
 <h3 class="profileDesignation">{{profile.designation}}</h3>
-<h3 class="profileSkills">{{profile.skills}}</h3>
+<h3 class="profileSkills" appHighlighter="green">{{profile.skills}}</h3>
 
 <button class="btn btn-primary" *ngIf="!flag" (click)="toggleContactDetails()">Collapse</button>
 <button class="btn btn-primary" *ngIf="flag" (click)="toggleContactDetails()">Expand</button>
@@ -18,9 +18,9 @@
         </p>
     </div>
 </div>
-<input type="text" [(ngModel)]="defaultValue">
+<!-- <input type="text" [(ngModel)]="defaultValue">
 <br>
-{{defaultValue}}
+{{defaultValue}} -->
 </div>
 
 

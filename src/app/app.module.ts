@@ -9,6 +9,7 @@ import { TestService } from './test.service';
 import { RestApiCallComponent } from './rest-api-call/rest-api-call.component';
 import {HttpClientModule} from '@angular/common/http';
 import { FormComponent } from './form/form.component';
+import { HighlighterDirective } from './highlighter.directive';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { FormComponent } from './form/form.component';
     OtherComponent,
     ProfileComponent,
     RestApiCallComponent,
-    FormComponent
+    FormComponent,
+    HighlighterDirective
   ],
   imports: [
     BrowserModule,
